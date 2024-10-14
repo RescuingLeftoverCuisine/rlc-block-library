@@ -1,0 +1,62 @@
+/* -------------------------------------------- */
+/* Block-specific reset to integrate blocks into
+/* a site without using global CSS.
+/*
+/* https://www.digitalocean.com/community/tutorials/css-minimal-css-reset
+/* -------------------------------------------- */
+
+@layer base {
+  .rlc__block,
+  .rlc__block *,
+  .rlc__block *:before,
+  .rlc__block *:after {
+    box-sizing: border-box;
+
+    /* Reset border properties to work with Tailwind border utilities. */
+    /* https://tailwindcss.com/docs/preflight#border-styles-are-reset-globally */
+    border-color: theme("borderColor.DEFAULT", currentColor);
+    border-style: solid;
+    border-width: 0;
+  }
+
+  .rlc__block,
+  .rlc__block h1,
+  .rlc__block h2,
+  .rlc__block h3,
+  .rlc__block h4,
+  .rlc__block h5,
+  .rlc__block h6,
+  .rlc__block p,
+  .rlc__block ol,
+  .rlc__block ul {
+    -webkit-font-smoothing: antialiased;
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+  }
+
+  .rlc__block a {
+    text-decoration: none;
+  }
+
+  .rlc__block button {
+    background: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .rlc__block form {
+    margin: 0;
+    padding: 0;
+  }
+
+  .rlc__block ol,
+  .rlc__block ul {
+    list-style: none;
+  }
+
+  .rlc__block img {
+    height: auto;
+    max-width: 100%;
+  }
+}

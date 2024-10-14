@@ -1,0 +1,7 @@
+.rlc__text__heading-one {
+  @apply rlc-font-heading rlc-text-5xl rlc-font-black !important;
+}
+
+.rlc__text__base {
+  @apply rlc-font-body rlc-text-base rlc-font-normal !important;
+}

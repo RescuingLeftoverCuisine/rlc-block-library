@@ -1,0 +1,25 @@
+/* -------------------------------------------- */
+/* Google Fonts
+/* -------------------------------------------- */
+
+@import "https://fonts.googleapis.com/css2?family=Lato:wght@400&family=Merriweather:wght@900&display=swap";
+
+/* -------------------------------------------- */
+/* Blocks
+/* -------------------------------------------- */
+
+@import "./blocks/blocks.reset.css";
+
+/* -------------------------------------------- */
+/* Components
+/* -------------------------------------------- */
+
+@import "./components/Text/Text.components.css";
+
+/* -------------------------------------------- */
+/* Initialize Tailwind
+/* -------------------------------------------- */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
