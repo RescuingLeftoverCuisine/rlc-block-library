@@ -1,5 +1,29 @@
-.rlc__text__heading-one {
-  @apply rlc-font-heading rlc-text-5xl rlc-font-black !important;
+.rlc__text__heading {
+  @apply rlc-font-heading rlc-font-black !important;
+}
+
+.rlc__text__heading__one {
+  @apply rlc__text__heading rlc-text-5xl !important;
+}
+
+.rlc__text__heading__two {
+  @apply rlc__text__heading rlc-text-4xl !important;
+}
+
+.rlc__text__heading__three {
+  @apply rlc__text__heading rlc-text-3xl !important;
+}
+
+.rlc__text__heading__four {
+  @apply rlc__text__heading rlc-text-2xl !important;
+}
+
+.rlc__text__heading__five {
+  @apply rlc__text__heading rlc-text-xl !important;
+}
+
+.rlc__text__heading__six {
+  @apply rlc__text__heading rlc-text-lg !important;
 }
 
 .rlc__text__base {

@@ -29,46 +29,46 @@ export default {
     },
 
     fontSize: {
-      // 16px @ 320px - 18px @ 1280px
-      base: [ 'clamp(1.000rem, 0.958rem + 0.208vw, 1.125rem)', {
-         /* 23px @ 320px - 26px @ 1280px */
-        lineHeight: 'clamp(1.438rem, 1.375rem + 0.313vw, 1.625rem)',
+      // 14px @ 320px - 16px @ 1280px
+      base: [ 'clamp(0.875rem, 0.8333rem + 0.2083vw, 1rem)', {
+         /* 20px @ 320px - 24px @ 1280px */
+        lineHeight: 'clamp(1.25rem, 1.1667rem + 0.4167vw, 1.5rem)',
       } ],
 
-      // 18px @ 320px - 24px @ 1280px
-      lg: [ 'clamp(1.125rem, 1rem + 0.625vw, 1.5rem)', {
-         /* 26px @ 320px - 32px @ 1280px */
-        lineHeight: 'clamp(1.625rem, 1.500rem + 0.625vw, 2.000rem)',
+      // 16px @ 320px - 24px @ 1280px
+      lg: [ 'clamp(1rem, 0.8333rem + 0.8333vw, 1.5rem)', {
+         /* 24px @ 320px - 32px @ 1280px */
+        lineHeight: 'clamp(1.5rem, 1.3333rem + 0.8333vw, 2rem)',
       } ],
 
-      // 24px @ 320px - 32px @ 1280px
-      xl: [ 'clamp(1.5rem, 1.333rem + 0.833vw, 2rem)', {
-         /* 34px @ 320px - 42px @ 1280px */
-        lineHeight: 'clamp(2.125rem, 1.958rem + 0.833vw, 2.625rem)',
+      // 16px @ 320px - 30px @ 1280px
+      xl: [ 'clamp(1rem, 0.7083rem + 1.4583vw, 1.875rem)', {
+         /* 24px @ 320px - 36px @ 1280px */
+        lineHeight: 'clamp(1.5rem, 1.25rem + 1.25vw, 2.25rem)',
       } ],
 
-      // 26px @ 380px - 38px @ 1280px
-      '2xl': [ 'clamp(1.625rem, 1.375rem + 1.250vw, 2.375rem)', {
-        /* 37px @ 320px - 48px @ 1280px */
+      // 18px @ 380px - 36px @ 1280px
+      '2xl': [ 'clamp(1.125rem, 0.75rem + 1.875vw, 2.25rem)', {
+        /* 24px @ 320px - 40px @ 1280px */
         lineHeight: 'clamp(2.313rem, 2.083rem + 1.146vw, 3.000rem)',
       } ],
 
-      /* 28px @ 320px - 48px @ 1280px */
-      '3xl': [ 'clamp(1.750rem, 1.333rem + 2.083vw, 3.000rem)', {
-        /* 41px @ 320px - 57px @ 1280px */
-        lineHeight: 'clamp(2.563rem, 2.229rem + 1.667vw, 3.563rem)',
+      /* 24px @ 320px - 42px @ 1280px */
+      '3xl': [ 'clamp(1.5rem, 1rem + 2.5vw, 3rem)', {
+        /* 48px @ 320px - 48px @ 1280px */
+        lineHeight: 'clamp(3rem, 3rem + 0vw, 3rem)',
       } ],
 
-      // 32px @ 320px - 62px @ 1280px
-      '4xl': [ 'clamp(2.000rem, 1.375rem + 3.125vw, 3.875rem)', {
-        /* 45px @ 320px - 70px @ 1280px */
-        lineHeight: 'clamp(2.813rem, 2.292rem + 2.604vw, 4.375rem)',
+      // 30px @ 320px - 60px @ 1280px
+      '4xl': [ 'clamp(1.875rem, 1.25rem + 3.125vw, 3.75rem)', {
+        /* 36px @ 320px - 60px @ 1280px */
+        lineHeight: 'clamp(2.25rem, 1.75rem + 2.5vw, 3.75rem)',
       } ],
 
-      // 42px @ 320px - 76px @ 1280px
-      '5xl': [ 'clamp(2.625rem, 1.917rem + 3.542vw, 4.750rem)', {
-        /* 58px @ 320px - 88px @ 1280px */
-        lineHeight: 'clamp(3.625rem, 3.000rem + 3.125vw, 5.500rem)',
+      // 36px @ 320px - 72px @ 1280px
+      '5xl': [ 'clamp(2.25rem, 1.5rem + 3.75vw, 4.5rem)', {
+        /* 40px @ 320px - 72px @ 1280px */
+        lineHeight: 'clamp(2.5rem, 1.8333rem + 3.3333vw, 4.5rem)',
       } ],
     },
   },
