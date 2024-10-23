@@ -1,9 +1,9 @@
 import '@testing-library/jest-dom'
+import { mergeProps } from '@/tests/support/mergeProps.helper.js'
 import { render } from '@testing-library/svelte'
 
 import Hero from './Hero.svelte'
 import { heroBaseData } from './Hero.data.js'
-import { mergeProps } from '../../../../tests/support/mergeProps.helper.js'
 
 // --------------------------------------------
 

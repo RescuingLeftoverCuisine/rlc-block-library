@@ -12,6 +12,7 @@
     "test": "vitest"
   },
   "devDependencies": {
+    "@adaptably/to": "^1.0.1",
     "@storybook/addon-essentials": "^8.3.6",
     "@storybook/blocks": "^8.3.6",
     "@storybook/svelte": "^8.3.6",
