@@ -8,4 +8,4 @@ export const heroBaseData = {
   image: {
     url: imageUrl,
   },
-};
+}

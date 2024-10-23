@@ -8,7 +8,8 @@
     "storybook:dev": "storybook dev -p 6006 --no-open",
     "styles:build": "postcss modules/main.css -o build/main.min.css",
     "styles:dev": "postcss modules/main.css -w -o build/main.min.css",
-    "styles:dev:engine": "nodemon -w build/main.min.css -e css -x 'cp -f build/main.min.css ../website/public/stylesheets/rlc_custom_page_builder/rlc_custom_page_builder.min.css'"
+    "styles:dev:engine": "nodemon -w build/main.min.css -e css -x 'cp -f build/main.min.css ../website/public/stylesheets/rlc_custom_page_builder/rlc_custom_page_builder.min.css'",
+    "test": "vitest"
   },
   "devDependencies": {
     "@storybook/addon-essentials": "^8.3.6",
@@ -16,8 +17,11 @@
     "@storybook/svelte": "^8.3.6",
     "@storybook/svelte-vite": "^8.3.6",
     "@sveltejs/vite-plugin-svelte": "^3.1.2",
+    "@testing-library/jest-dom": "^6.6.2",
+    "@testing-library/svelte": "^5.2.4",
     "autoprefixer": "^10.4.20",
     "cssnano": "^7.0.6",
+    "jsdom": "^25.0.1",
     "nodemon": "^3.1.7",
     "postcss": "^8.4.47",
     "postcss-cli": "^11.0.0",
@@ -25,6 +29,7 @@
     "storybook": "^8.3.6",
     "svelte": "^4.2.19",
     "tailwindcss": "^3.4.14",
-    "vite": "^5.4.9"
+    "vite": "^5.4.9",
+    "vitest": "^2.1.3"
   }
 }
