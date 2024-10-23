@@ -10,100 +10,38 @@ export const copyBaseData = {
   },
 }
 
-export const copyWithHeadings = {
-  data: {
-    copy: {
+export function copyWithUnorderedList(listItems) {
+  const listData = {
+    type: 'bullet_list',
+    content: [],
+  }
+
+  listItems.forEach(item => {
+    listData.content.push({
+      type: 'list_item',
+
       content: [
         {
-          type: 'heading',
-
-          attrs: {
-            level: 1
-          },
+          type: 'paragraph',
 
           content: [
             {
-              text: 'Heading 1',
-              type: 'text'
-            }
-          ]
-        },
-
-        {
-          type: 'heading',
-
-          attrs: {
-            level: 2
-          },
-
-          content: [
-            {
-              text: 'Heading 2',
-              type: 'text'
-            }
-          ]
-        },
-
-        {
-          type: 'heading',
-
-          attrs: {
-            level: 3
-          },
-
-          content: [
-            {
-              text: 'Heading 3',
-              type: 'text'
-            }
-          ]
-        },
-
-        {
-          type: 'heading',
-
-          attrs: {
-            level: 4
-          },
-
-          content: [
-            {
-              text: 'Heading 4',
-              type: 'text'
-            }
-          ]
-        },
-
-        {
-          type: 'heading',
-
-          attrs: {
-            level: 5
-          },
-
-          content: [
-            {
-              text: 'Heading 5',
-              type: 'text'
-            }
-          ]
-        },
-
-        {
-          type: 'heading',
-
-          attrs: {
-            level: 6
-          },
-
-          content: [
-            {
-              text: 'Heading 6',
-              type: 'text'
+              type: 'text',
+              text: item,
             }
           ]
         }
       ]
+    })
+  })
+
+  return {
+    data: {
+      copy: {
+        content: [
+          listData
+        ]
+      }
     }
   }
 }
@@ -121,8 +59,8 @@ export const copyWithAllSupportedElements = {
 
           content: [
             {
+              type: 'text',
               text: 'Heading 1',
-              type: 'text'
             }
           ]
         },
@@ -132,13 +70,13 @@ export const copyWithAllSupportedElements = {
 
           content: [
             {
+              type: 'text',
               text: 'Lorem ipsum ',
-              type: 'text'
             },
 
             {
-              text: 'dolor sit amet',
               type: 'text',
+              text: 'dolor sit amet',
 
               marks: [
                 {
@@ -148,13 +86,13 @@ export const copyWithAllSupportedElements = {
             },
 
             {
+              type: 'text',
               text: ', ',
-              type: 'text'
             },
 
             {
-              text: 'consectetur adipiscing elit',
               type: 'text',
+              text: 'consectetur adipiscing elit',
 
               marks: [
                 {
@@ -164,13 +102,13 @@ export const copyWithAllSupportedElements = {
             },
 
             {
+              type: 'text',
               text: ', ',
-              type: 'text'
             },
 
             {
-              text: 'sed do eiusmod',
               type: 'text',
+              text: 'sed do eiusmod',
 
               marks: [
                 {
@@ -178,18 +116,15 @@ export const copyWithAllSupportedElements = {
 
                   attrs: {
                     href: 'https://google.com',
-                    uuid: null,
-                    anchor: null,
                     target: '_self',
-                    linktype: 'url'
                   }
                 }
               ]
             },
 
             {
+              type: 'text',
               text: ' tempor incididunt ut labore et dolore magna aliqua.',
-              type: 'text'
             }
           ]
         },
@@ -209,8 +144,8 @@ export const copyWithAllSupportedElements = {
 
           content: [
             {
+              type: 'text',
               text: 'Feugiat pharetra varius; finibus pretium lectus suspendisse et. Tortor posuere auctor risus ut elementum risus pulvinar convallis. Nascetur porttitor vestibulum dui hac, penatibus amet curae per donec.',
-              type: 'text'
             }
           ]
         },
@@ -220,8 +155,8 @@ export const copyWithAllSupportedElements = {
 
           content: [
             {
-              text: 'Bold Text',
               type: 'text',
+              text: 'Bold Text',
 
               marks: [
                 {
@@ -237,8 +172,8 @@ export const copyWithAllSupportedElements = {
 
           content: [
             {
-              text: 'Italic Text',
               type: 'text',
+              text: 'Italic Text',
 
               marks: [
                 {
@@ -254,18 +189,16 @@ export const copyWithAllSupportedElements = {
 
           content: [
             {
-              text: 'Link',
               type: 'text',
+              text: 'Link',
 
               marks: [
                 {
                   type: 'link',
+
                   attrs: {
                     href: 'https://google.com',
-                    uuid: null,
-                    anchor: null,
                     target: '_blank',
-                    linktype: 'url'
                   }
                 }
               ]
@@ -296,13 +229,31 @@ export const copyWithAllSupportedElements = {
 
             {
               type: 'list_item',
+
               content: [
                 {
                   type: 'paragraph',
+
                   content: [
                     {
-                      text: 'List Item 2',
-                      type: 'text'
+                      type: 'text',
+                      text: 'List ',
+                    },
+
+                    {
+                      type: 'text',
+                      text: 'Item',
+
+                      marks: [
+                        {
+                          type: 'bold'
+                        }
+                      ]
+                    },
+
+                    {
+                      type: 'text',
+                      text: ' 2',
                     }
                   ]
                 }
@@ -315,9 +266,64 @@ export const copyWithAllSupportedElements = {
               content: [
                 {
                   type: 'paragraph',
+
                   content: [
                     {
-                      text: 'List Item 3',
+                      type: 'text',
+                      text: 'List ',
+                    },
+
+                    {
+                      type: 'text',
+                      text: 'Item',
+
+                      marks: [
+                        {
+                          type: 'italic'
+                        }
+                      ]
+                    },
+
+                    {
+                      type: 'text',
+                      text: ' 3',
+                    }
+                  ]
+                }
+              ]
+            },
+
+            {
+              type: 'list_item',
+
+              content: [
+                {
+                  type: 'paragraph',
+
+                  content: [
+                    {
+                      type: 'text',
+                      text: 'List ',
+                    },
+
+                    {
+                      type: 'text',
+                      text: 'Item',
+
+                      marks: [
+                        {
+                          type: 'link',
+
+                          attrs: {
+                            href: 'https://google.com',
+                            target: '_blank',
+                          }
+                        }
+                      ]
+                    },
+
+                    {
+                      text: ' 4',
                       type: 'text'
                     }
                   ]

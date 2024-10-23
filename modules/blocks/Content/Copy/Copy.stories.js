@@ -1,5 +1,5 @@
 import Copy from './Copy.svelte'
-import { copyBaseData } from './Copy.data.js'
+import { copyWithAllSupportedElements } from './Copy.data.js'
 
 // --------------------------------------------
 
@@ -9,5 +9,5 @@ export default {
 }
 
 export const Base = {
-  args: copyBaseData,
+  args: copyWithAllSupportedElements,
 }
