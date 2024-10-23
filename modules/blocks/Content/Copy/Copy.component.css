@@ -1,0 +1,58 @@
+@layer components {
+  .rlc__block__copy
+  p {
+    @apply rlc__text__base !important;
+  }
+
+  .rlc__block__copy
+  p {
+    @apply rlc__text__base !important;
+  }
+
+  .rlc__block__copy
+  p + p {
+    @apply rlc-mt-2 !important;
+  }
+
+  .rlc__block__copy
+  p + h1,
+  p + h2,
+  p + h3,
+  p + h4,
+  p + h5,
+  p + h6 {
+    @apply rlc-mt-2.5 tablet:rlc-mt-4 desktop-medium:rlc-mt-6 !important;
+  }
+
+  /* -------------------------------------------- */
+
+  .rlc__block__copy
+  h1 {
+    @apply rlc__text__heading__one rlc-mb-2 !important;
+  }
+
+  .rlc__block__copy
+  h2 {
+    @apply rlc__text__heading__two rlc-mb-2 !important;
+  }
+
+  .rlc__block__copy
+  h3 {
+    @apply rlc__text__heading__three rlc-mb-1.5 !important;
+  }
+
+  .rlc__block__copy
+  h4 {
+    @apply rlc__text__heading__four rlc-mb-1.5 !important;
+  }
+
+  .rlc__block__copy
+  h5 {
+    @apply rlc__text__heading__five rlc-mb-1 !important;
+  }
+
+  .rlc__block__copy
+  h6 {
+    @apply rlc__text__heading__six rlc-mb-1 !important;
+  }
+}

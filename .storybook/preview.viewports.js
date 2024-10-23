@@ -48,7 +48,7 @@ export default {
     name: "Desktop (Wide)",
 
     styles: {
-      width: "1920px",
+      width: "1600px",
       height: "1080px",
     },
   },

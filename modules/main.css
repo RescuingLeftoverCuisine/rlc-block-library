@@ -10,11 +10,14 @@
 
 @import "./blocks/blocks.reset.css";
 
+@import "./blocks/Copy/Copy.component.css";
+@import "./blocks/Hero/Hero.component.css";
+
 /* -------------------------------------------- */
-/* Components
+/* Elements
 /* -------------------------------------------- */
 
-@import "./components/Text/Text.components.css";
+@import "./elements/Text/Text.elements.css";
 
 /* -------------------------------------------- */
 /* Initialize Tailwind

@@ -1,0 +1,16 @@
+@layer components {
+  .rlc__block__hero {
+    /* 260px @ 320px - 780px @ 1600px */
+    height: clamp(16.25rem, 8.125rem + 40.625vw, 48.75rem);
+  }
+
+  .rlc__block__hero
+  .rlc__block__hero__scrim {
+    background-image: linear-gradient(
+      180deg,
+      rgba(55, 165, 219, 0.50) 0%,
+      rgba(55, 165, 219, 1.00) 97%,
+      rgba(55, 165, 219, 1.00) 100%
+    );
+  }
+}

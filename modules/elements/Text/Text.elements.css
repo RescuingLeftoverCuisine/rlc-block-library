@@ -29,3 +29,7 @@
 .rlc__text__base {
   @apply rlc-font-body rlc-text-base rlc-font-normal !important;
 }
+
+.rlc__text__link {
+  @apply rlc-font-body rlc-text-base rlc-font-bold rlc-text-near-shore hover:rlc-underline hover:rlc-underline-offset-2 !important;
+}

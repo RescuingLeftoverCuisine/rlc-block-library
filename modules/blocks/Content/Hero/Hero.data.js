@@ -1,4 +1,4 @@
-import imageUrl from "./assets/image.jpeg";
+import imageUrl from "./assets/image.jpg";
 
 // --------------------------------------------
 

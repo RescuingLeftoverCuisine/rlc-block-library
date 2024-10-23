@@ -29,10 +29,10 @@ export default {
     },
 
     fontSize: {
-      // 14px @ 320px - 16px @ 1280px
-      base: [ 'clamp(0.875rem, 0.8333rem + 0.2083vw, 1rem)', {
-         /* 20px @ 320px - 24px @ 1280px */
-        lineHeight: 'clamp(1.25rem, 1.1667rem + 0.4167vw, 1.5rem)',
+      // 16px @ 320px - 20px @ 1280px
+      base: [ 'clamp(1rem, 0.9167rem + 0.4167vw, 1.25rem)', {
+         /* 22px @ 320px - 28px @ 1280px */
+        lineHeight: 'clamp(1.375rem, 1.25rem + 0.625vw, 1.75rem)',
       } ],
 
       // 16px @ 320px - 24px @ 1280px
@@ -50,13 +50,13 @@ export default {
       // 18px @ 380px - 36px @ 1280px
       '2xl': [ 'clamp(1.125rem, 0.75rem + 1.875vw, 2.25rem)', {
         /* 24px @ 320px - 40px @ 1280px */
-        lineHeight: 'clamp(2.313rem, 2.083rem + 1.146vw, 3.000rem)',
+        lineHeight: 'clamp(1.5rem, 1.1667rem + 1.6667vw, 2.5rem)',
       } ],
 
       /* 24px @ 320px - 42px @ 1280px */
       '3xl': [ 'clamp(1.5rem, 1rem + 2.5vw, 3rem)', {
-        /* 48px @ 320px - 48px @ 1280px */
-        lineHeight: 'clamp(3rem, 3rem + 0vw, 3rem)',
+        /* 32px @ 320px - 48px @ 1280px */
+        lineHeight: 'clamp(2rem, 1.6667rem + 1.6667vw, 3rem)',
       } ],
 
       // 30px @ 320px - 60px @ 1280px
@@ -71,5 +71,11 @@ export default {
         lineHeight: 'clamp(2.5rem, 1.8333rem + 3.3333vw, 4.5rem)',
       } ],
     },
+  },
+
+  screens: {
+    'tablet': '768px',
+    'desktop-medium': '1280px',
+    'desktop-wide': '1600px',
   },
 }
