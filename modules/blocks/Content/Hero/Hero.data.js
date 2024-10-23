@@ -1,11 +1,13 @@
-import imageUrl from "./assets/image.jpg";
+import imageUrl from './assets/image.jpg';
 
 // --------------------------------------------
 
 export const heroBaseData = {
-  heading: "Curabitur Sodales Integer Vestibulum Nisl",
+  data: {
+    heading: 'Curabitur Sodales Integer Vestibulum Nisl',
 
-  image: {
-    url: imageUrl,
+    image: {
+      filename: imageUrl,
+    },
   },
 }
