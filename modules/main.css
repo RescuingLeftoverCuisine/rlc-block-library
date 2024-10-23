@@ -10,8 +10,8 @@
 
 @import "./blocks/blocks.reset.css";
 
-@import "./blocks/Copy/Copy.component.css";
-@import "./blocks/Hero/Hero.component.css";
+@import "./blocks/content/Copy/Copy.component.css";
+@import "./blocks/content/Hero/Hero.component.css";
 
 /* -------------------------------------------- */
 /* Elements
