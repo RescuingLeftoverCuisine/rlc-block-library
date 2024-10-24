@@ -1,5 +1,18 @@
 <script>
   export let data
+
+  // Include /m to convert to .webp.
+  // Include 1600x0 to resize to a maximum width of 1600px.
+  //
+  // https://www.storyblok.com/docs/image-service#united-states
+  let imageUrl = `${ data.image.filename }/m/1600x0`
+
+  // Include a focal point.
+  //
+  // https://www.storyblok.com/faq/use-focal-point-set-in-storyblok
+  if (data.image.focus && data.image.focus !== '') {
+    imageUrl += `/filters:focal(${ data.image.focus})`
+  }
 </script>
 
 <div
@@ -7,7 +20,7 @@
 >
   <div
     title='RLC Hero Background'
-    style='background-image: url({ data.image.filename })'
+    style='background-image: url("{ imageUrl }")'
     class='rlc-absolute rlc-bg-cover rlc-bg-center rlc-bottom-0 rlc-left-0 rlc-right-0 rlc-top-0 rlc-z-0 rlc-grayscale'
   ></div>
 
