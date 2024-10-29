@@ -1,0 +1,6 @@
+@layer components {
+  .rlc__block__image.rlc__block__image--alignment-center
+  img {
+    @apply rlc-mx-auto !important;
+  }
+}
