@@ -2,8 +2,8 @@
   export let data
 </script>
 
-<div class='rlc__block rlc__block__copy rlc-p-4 tablet:rlc-py-8'>
-  <div class='rlc-max-w-[550px] rlc-mx-auto rlc-flex rlc-flex-col rlc-gap-2'>
+<div class='rlc__block rlc__block__copy rlc__block__copy--alignment-{ data.alignment } rlc-p-4 tablet:rlc-py-8'>
+  <div class='rlc-flex rlc-flex-col rlc-gap-2'>
     { #each data.copy.content as content }
       <!-- -------------------------------------------- -->
       <!-- Headings -->
@@ -109,7 +109,7 @@
       <!-- Bulleted Lists -->
 
       { #if content.type === 'bullet_list' }
-        <ul class='rlc-pl-4'>
+        <ul class='rlc-block rlc-w-fit rlc-pl-4'>
           { #if content.content }
             { #each content.content as bulletListContent }
               { #if bulletListContent.type === 'list_item' }

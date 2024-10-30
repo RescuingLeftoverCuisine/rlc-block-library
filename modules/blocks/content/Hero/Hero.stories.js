@@ -5,7 +5,7 @@ import { mergeDataForStory } from '@/tests/support/merge.helper.js'
 // --------------------------------------------
 
 export default {
-  title: 'Blocks/Hero',
+  title: 'Blocks/Content/Hero',
   component: Hero,
 }
 

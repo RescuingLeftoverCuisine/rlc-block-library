@@ -1,4 +1,5 @@
 import '@testing-library/jest-dom'
+import { mergeProps } from '@/tests/support/merge.helper.js'
 import { render, within } from '@testing-library/svelte'
 
 import Copy from './Copy.svelte'
@@ -11,6 +12,15 @@ describe('Copy Block', () => {
     render(Copy, {
       props: copyBaseData,
     })
+  })
+
+  it('renders alignment', () => {
+    const { container } = render(Copy, mergeProps(copyBaseData, {
+      alignment: 'center',
+    }))
+
+    const blockElement = container.querySelector('.rlc__block')
+    expect(blockElement).toHaveClass('rlc__block__copy--alignment-center')
   })
 
   it('renders headings', () => {

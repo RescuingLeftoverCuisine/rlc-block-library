@@ -1,5 +1,7 @@
 export const copyBaseData = {
   data: {
+    alignment: 'left',
+
     copy: {
       content: [
         {

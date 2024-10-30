@@ -12,6 +12,7 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': pathTo('./', { from: import.meta.url }),
+      '@Content': pathTo('./modules/blocks/content', { from: import.meta.url }),
     },
   },
 })

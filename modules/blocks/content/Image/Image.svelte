@@ -42,7 +42,7 @@
 
 <div class='rlc__block rlc__block__image rlc__block__image--alignment-{ imageAlignment }'>
   <img
-    class="rlc-block rlc-w-full rlc-object-cover rlc-object-center"
+    class="rlc-block rlc-h-full rlc-w-full rlc-object-cover rlc-object-center"
     src='{ imageUrl }'
     style='{ imageStyles }'
   />

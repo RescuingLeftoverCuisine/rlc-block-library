@@ -1,0 +1,15 @@
+@layer components {
+  .rlc__block--layout--theme-blue
+  .rlc__block__copy {
+    @apply rlc-text-white !important;
+  }
+
+  .rlc__block__copy.rlc__block__copy--alignment-center {
+    @apply rlc-text-center !important;
+  }
+
+  .rlc__block__copy.rlc__block__copy--alignment-center
+  ul {
+    @apply rlc-mx-auto !important;
+  }
+}

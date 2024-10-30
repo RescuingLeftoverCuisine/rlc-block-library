@@ -1,0 +1,10 @@
+@layer components {
+  .rlc__block--layout--theme-blue.rlc__block__basic-layout {
+    @apply rlc-bg-blue !important;
+  }
+
+  .rlc__block__basic-layout.rlc__block__basic-layout--layout-width-medium
+  .rlc__block__basic-layout__content {
+    @apply rlc-max-w-[940px] rlc-mx-auto !important;
+  }
+}
