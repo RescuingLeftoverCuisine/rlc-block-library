@@ -5,14 +5,7 @@
   // Include 1600x0 to resize to a maximum width of 1600px.
   //
   // https://www.storyblok.com/docs/image-service#united-states
-  let imageUrl = `${ data.image.filename }/m/1600x0/`
-
-  // Include a focal point when one is provided.
-  //
-  // https://www.storyblok.com/faq/use-focal-point-set-in-storyblok
-  if (data.image.focus && data.image.focus !== '') {
-    imageUrl += `filters:focal(${ data.image.focus})`
-  }
+  let imageUrl = `${ data.image.filename }/m/1600x0`
 
   // Development Only (Do Not Port)
   // --------------------------------------------
