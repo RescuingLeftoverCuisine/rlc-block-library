@@ -26,7 +26,7 @@ describe('Image Block', () => {
     // Include /m to convert to .webp.
     //
     // https://www.storyblok.com/docs/image-service#united-states
-    expect(imageElement).toHaveAttribute('src', 'test-image.jpg/m')
+    expect(imageElement).toHaveAttribute('src', 'test-image.jpg/m/1600x0/')
   })
 
   it('adds the alignment modifier class based on given alignment', () => {
@@ -41,7 +41,7 @@ describe('Image Block', () => {
   it('renders the given image with a focal point when a focal point is provided', () => {
     const { getByRole } = render(Image, mergeProps(imageBaseData, {
       image: {
-        filename: 'test-image.jpg',
+        filename: 'https://a-us.storyblok.com/f/1021986/5330x3543/9ac72b7177/rlc-hero-example.jpg',
         focus: '4554x2261:4555x2262',
       }
     }))
@@ -49,7 +49,13 @@ describe('Image Block', () => {
     const imageElement = getByRole('img')
 
     // https://www.storyblok.com/faq/use-focal-point-set-in-storyblok
-    expect(imageElement).toHaveAttribute('src', 'test-image.jpg/m/filters:focal(4554x2261:4555x2262)')
+    expect(imageElement).toHaveAttribute('src', 'https://a-us.storyblok.com/f/1021986/5330x3543/9ac72b7177/rlc-hero-example.jpg/m/1600x0/filters:focal(4554x2261:4555x2262)')
+
+    expect(imageElement).toHaveStyle({
+      'object-position': '85% 64%'
+    })
+
+    expect(imageElement.style._importants['object-position']).toEqual('important')
   })
 
   it('renders the given image with an aspect ratio when an aspect ratio is provided', () => {

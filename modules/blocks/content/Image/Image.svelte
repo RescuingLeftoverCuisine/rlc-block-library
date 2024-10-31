@@ -1,20 +1,6 @@
 <script>
   export let data
 
-  const imageAlignment = data.alignment
-
-  // Include /m to convert to .webp.
-  //
-  // https://www.storyblok.com/docs/image-service#united-states
-  let imageUrl = `${ data.image.filename }/m`
-
-  // Include a focal point when one is provided.
-  //
-  // https://www.storyblok.com/faq/use-focal-point-set-in-storyblok
-  if (data.image.focus && data.image.focus !== '') {
-    imageUrl += `/filters:focal(${ data.image.focus})`
-  }
-
   let imageStyles = ''
 
   if (typeof(data.aspectRatio) !== 'undefined') {
@@ -28,6 +14,36 @@
   if (typeof(data.maximumHeight) !== 'undefined') {
     imageStyles += `max-height: ${ data.maximumHeight };`
   }
+
+  if (data.image.focus && data.image.focus !== '') {
+    const imageDimensions = data.image.filename.match(/(?<=\/\d+\/)(\d+x\d+)(?=\/)/)[0]
+    const imageWidth = imageDimensions.split('x')[0]
+    const imageHeight = imageDimensions.split('x')[1]
+
+    const imageFocus = data.image.focus.split(':')[0]
+    const imageFocusX = imageFocus.split('x')[0]
+    const imageFocusY = imageFocus.split('x')[1]
+
+    const objectPositionX = (imageFocusX / imageWidth).toFixed(2) * 100
+    const objectPositionY = (imageFocusY / imageHeight).toFixed(2) * 100
+
+    imageStyles += `object-position: ${ objectPositionX }% ${ objectPositionY }% !important;`
+  }
+
+  // Include /m to convert to .webp.
+  // Constrain width to a maximum of 1600px wide.
+  //
+  // https://www.storyblok.com/docs/image-service#united-states
+  let imageUrl = `${ data.image.filename }/m/1600x0/`
+
+  // Include a focal point when one is provided.
+  //
+  // https://www.storyblok.com/faq/use-focal-point-set-in-storyblok
+  if (data.image.focus && data.image.focus !== '') {
+    imageUrl += `filters:focal(${ data.image.focus})`
+  }
+
+  const imageAlignment = data.alignment
 
   // --------------------------------------------
   // Development Only (Do Not Port)
