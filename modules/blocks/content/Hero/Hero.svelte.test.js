@@ -24,13 +24,13 @@ describe('Hero Block', () => {
   })
 
   it('renders the given image as a background image', () => {
-    const { getByTitle } = render(Hero, mergeProps(heroBaseData, {
+    const { container } = render(Hero, mergeProps(heroBaseData, {
       image: {
         filename: 'test-image.jpg'
       }
     }))
 
-    const backgroundElement = getByTitle('RLC Hero Background')
+    const backgroundElement = container.querySelector('.rlc__block__hero__image')
 
     // Include /m to convert to .webp.
     // Include 1600x0 to resize to a maximum width of 1600px.

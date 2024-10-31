@@ -14,13 +14,13 @@ describe('Copy Block', () => {
     })
   })
 
-  it('renders alignment', () => {
+  it('renders copy alignment', () => {
     const { container } = render(Copy, mergeProps(copyBaseData, {
-      alignment: 'center',
+      copyAlignment: 'center',
     }))
 
     const blockElement = container.querySelector('.rlc__block')
-    expect(blockElement).toHaveClass('rlc__block__copy--alignment-center')
+    expect(blockElement).toHaveClass('rlc__block__copy--copy-alignment-center')
   })
 
   it('renders headings', () => {

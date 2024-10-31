@@ -4,11 +4,11 @@
     @apply rlc-text-white !important;
   }
 
-  .rlc__block__copy.rlc__block__copy--alignment-center {
+  .rlc__block__copy.rlc__block__copy--copy-alignment-center {
     @apply rlc-text-center !important;
   }
 
-  .rlc__block__copy.rlc__block__copy--alignment-center
+  .rlc__block__copy.rlc__block__copy--copy-alignment-center
   ul {
     @apply rlc-mx-auto !important;
   }

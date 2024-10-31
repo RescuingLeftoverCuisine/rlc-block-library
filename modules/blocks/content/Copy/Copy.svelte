@@ -2,7 +2,7 @@
   export let data
 </script>
 
-<div class='rlc__block rlc__block__copy rlc__block__copy--alignment-{ data.alignment } rlc-p-4 tablet:rlc-py-8'>
+<div class='rlc__block rlc__block__copy rlc__block__copy--copy-alignment-{ data.copyAlignment } rlc-p-4 tablet:rlc-py-8'>
   <div class='rlc-flex rlc-flex-col rlc-gap-2'>
     { #each data.copy.content as content }
       <!-- -------------------------------------------- -->
