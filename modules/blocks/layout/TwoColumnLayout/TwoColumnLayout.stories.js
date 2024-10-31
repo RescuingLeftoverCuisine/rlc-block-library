@@ -21,6 +21,22 @@ export const WithThemeBlue = {
   })
 }
 
+export const WithThemeDarkGray = {
+  name: 'With: Theme (Dark Gray)',
+
+  args: mergeDataForStory(twoColumnLayoutBaseData, {
+    theme: 'dark-gray',
+  })
+}
+
+export const WithThemeNearShore = {
+  name: 'With: Theme (Near Shore)',
+
+  args: mergeDataForStory(twoColumnLayoutBaseData, {
+    theme: 'near-shore',
+  })
+}
+
 export const WithColumnRatio1To2 = {
   name: 'With: Column Ratio (1/2)',
 

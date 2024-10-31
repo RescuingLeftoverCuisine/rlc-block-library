@@ -21,6 +21,22 @@ export const WithThemeBlue = {
   })
 }
 
+export const WithThemeDarkGray = {
+  name: 'With: Theme (Dark Gray)',
+
+  args: mergeDataForStory(basicLayoutBaseData, {
+    theme: 'dark-gray',
+  })
+}
+
+export const WithThemeNearShore = {
+  name: 'With: Theme (Near Shore)',
+
+  args: mergeDataForStory(basicLayoutBaseData, {
+    theme: 'near-shore',
+  })
+}
+
 export const WithLayoutWidthMedium = {
   name: 'With: Layout Width (Medium) & Theme (Blue)',
 

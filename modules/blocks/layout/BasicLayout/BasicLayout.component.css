@@ -3,6 +3,14 @@
     @apply rlc-bg-blue !important;
   }
 
+  .rlc__block--layout--theme-dark-gray.rlc__block__basic-layout {
+    @apply rlc-bg-dark-gray !important;
+  }
+
+  .rlc__block--layout--theme-near-shore.rlc__block__basic-layout {
+    @apply rlc-bg-near-shore !important;
+  }
+
   .rlc__block__basic-layout.rlc__block__basic-layout--layout-width-medium
   .rlc__block__basic-layout__content {
     @apply rlc-max-w-[940px] rlc-mx-auto !important;

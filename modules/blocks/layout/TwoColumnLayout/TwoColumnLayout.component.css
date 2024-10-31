@@ -2,4 +2,12 @@
   .rlc__block--layout--theme-blue.rlc__block__two-column-layout {
     @apply rlc-bg-blue !important;
   }
+
+  .rlc__block--layout--theme-dark-gray.rlc__block__two-column-layout {
+    @apply rlc-bg-dark-gray !important;
+  }
+
+  .rlc__block--layout--theme-near-shore.rlc__block__two-column-layout {
+    @apply rlc-bg-near-shore !important;
+  }
 }
