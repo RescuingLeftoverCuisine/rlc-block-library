@@ -2,7 +2,7 @@
 /* Google Fonts
 /* -------------------------------------------- */
 
-@import "https://fonts.googleapis.com/css2?family=Lato:wght@400&family=Merriweather:wght@900&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Merriweather:wght@900&display=swap";
 
 /* -------------------------------------------- */
 /* Blocks
@@ -10,6 +10,7 @@
 
 @import "./blocks/blocks.reset.css";
 
+@import "./blocks/content/Button/Button.component.css";
 @import "./blocks/content/Copy/Copy.component.css";
 @import "./blocks/content/Hero/Hero.component.css";
 @import "./blocks/content/Image/Image.component.css";
