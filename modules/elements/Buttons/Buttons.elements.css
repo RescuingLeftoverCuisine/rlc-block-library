@@ -1,0 +1,15 @@
+.rlc__button {
+  @apply rlc__text__base rlc-rounded-[1.5rem] rlc-px-10 rlc-py-3 tablet:rlc-px-11 desktop-medium:rlc-px-12 rlc-text-white rlc-font-bold rlc-inline-block rlc-transition-colors rlc-cursor-pointer !important;
+}
+
+.rlc__button--theme-blue {
+  @apply rlc-bg-blue hover:rlc-bg-[#2A88B3] !important;
+}
+
+.rlc__button--theme-deep {
+  @apply rlc-bg-deep hover:rlc-bg-[#013769] !important;
+}
+
+.rlc__button--theme-sun {
+  @apply rlc-bg-sun hover:rlc-bg-[#FFAC3F] !important;
+}

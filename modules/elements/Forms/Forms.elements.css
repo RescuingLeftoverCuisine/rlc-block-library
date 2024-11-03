@@ -1,0 +1,3 @@
+.rlc__form__text {
+  @apply rlc__text__base rlc-border rlc-rounded-[0.625rem] rlc-px-2 rlc-py-2 !important;
+}

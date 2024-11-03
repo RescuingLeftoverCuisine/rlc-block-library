@@ -28,7 +28,8 @@
   .rlc__block h6,
   .rlc__block p,
   .rlc__block ol,
-  .rlc__block ul {
+  .rlc__block ul,
+  .rlc__block fieldset {
     -webkit-font-smoothing: antialiased;
     font-weight: normal;
     margin: 0;

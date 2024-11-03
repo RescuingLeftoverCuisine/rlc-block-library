@@ -12,6 +12,10 @@ export default {
   },
 
   extend: {
+    borderColor: {
+      DEFAULT: 'black',
+    },
+
     colors: {
       // Primary
       blue: '#36A5D8',

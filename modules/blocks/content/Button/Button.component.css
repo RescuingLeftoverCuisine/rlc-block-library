@@ -2,16 +2,4 @@
   .rlc__block__button.rlc__block__button--alignment-center {
     @apply rlc-text-center !important;
   }
-
-  .rlc__block__button.rlc__block__button--theme-blue a {
-    @apply rlc-bg-blue hover:rlc-bg-[#2A88B3] !important;
-  }
-
-  .rlc__block__button.rlc__block__button--theme-deep a {
-    @apply rlc-bg-deep hover:rlc-bg-[#013769] !important;
-  }
-
-  .rlc__block__button.rlc__block__button--theme-sun a {
-    @apply rlc-bg-sun hover:rlc-bg-[#FFAC3F] !important;
-  }
 }

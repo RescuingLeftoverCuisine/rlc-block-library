@@ -24,12 +24,11 @@ describe('Button Block', () => {
   })
 
   it('renders the given theme', () => {
-    const { container } = render(Button, mergeProps(buttonBaseData, {
+    const { getByRole } = render(Button, mergeProps(buttonBaseData, {
       theme: 'sun',
     }))
 
-    const blockElement = container.querySelector('.rlc__block')
-    expect(blockElement).toHaveClass('rlc__block__button--theme-sun')
+    expect(getByRole('link')).toHaveClass('rlc__button--theme-sun')
   })
 
   it('renders the given text', () => {

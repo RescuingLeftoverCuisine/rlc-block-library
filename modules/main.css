@@ -22,6 +22,8 @@
 /* Elements
 /* -------------------------------------------- */
 
+@import "./elements/Buttons/Buttons.elements.css";
+@import "./elements/Forms/Forms.elements.css";
 @import "./elements/Text/Text.elements.css";
 
 /* -------------------------------------------- */
