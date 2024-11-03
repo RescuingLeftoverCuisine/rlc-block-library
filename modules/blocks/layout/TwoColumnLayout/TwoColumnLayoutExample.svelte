@@ -18,6 +18,6 @@
 </script>
 
 <TwoColumnLayout { ...twoColumnLayoutData }>
-  <Image { ...imageData } />
-  <Copy { ...copyData } />
+  <Image slot='column-left' { ...imageData } />
+  <Copy slot='column-right' { ...copyData } />
 </TwoColumnLayout>

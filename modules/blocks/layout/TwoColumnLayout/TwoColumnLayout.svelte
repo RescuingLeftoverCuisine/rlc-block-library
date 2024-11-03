@@ -10,6 +10,7 @@
     style='grid-template-columns: { gridColumnRatioLeft }fr { gridColumnRatioRight }fr;'
     class='rlc__block__two-column-layout__content tablet:rlc-grid'
   >
-    <slot />
+    <slot name='column-left' />
+    <slot name='column-right' />
   </div>
 </div>
