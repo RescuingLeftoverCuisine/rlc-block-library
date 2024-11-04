@@ -57,9 +57,21 @@
 </script>
 
 <div class='rlc__block rlc__block__image rlc__block__image--alignment-{ imageAlignment }'>
-  <img
-    class="rlc-block rlc-h-full rlc-w-full rlc-object-cover rlc-object-center"
-    src='{ imageUrl }'
-    style='{ imageStyles }'
-  />
+  { #if data.link }
+    <a href='{ data.link.url }' target='{ data.link.target }'>
+      <img
+        class="rlc-block rlc-h-full rlc-w-full rlc-object-cover rlc-object-center"
+        src='{ imageUrl }'
+        style='{ imageStyles }'
+      />
+    </a>
+  { /if }
+
+  { #if typeof(data.link) === 'undefined' }
+    <img
+      class="rlc-block rlc-h-full rlc-w-full rlc-object-cover rlc-object-center"
+      src='{ imageUrl }'
+      style='{ imageStyles }'
+    />
+  { /if }
 </div>

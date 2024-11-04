@@ -85,7 +85,7 @@ describe('Image Block', () => {
     expect(imageElement).toHaveStyle({ maxHeight: '400px' })
   })
 
-  it('renders the given image with all options when all options are provided', () => {
+  it('renders the given image with all display options when all display options are provided', () => {
     const { getByRole } = render(Image, mergeProps(imageBaseData, {
       aspectRatio: '1/2',
       maximumHeight: '400px',
@@ -99,5 +99,18 @@ describe('Image Block', () => {
       maxHeight: '400px',
       maxWidth: '200px',
     })
+  })
+
+  it('renders the given link', () => {
+    const { getByRole } = render(Image, mergeProps(imageBaseData, {
+      link: {
+        url: 'test-url.com',
+        target: '_self',
+      }
+    }))
+
+    const linkElement = getByRole('link')
+    expect(linkElement).toHaveAttribute('href', 'test-url.com')
+    expect(linkElement.querySelector('img')).toBeInTheDocument()
   })
 })

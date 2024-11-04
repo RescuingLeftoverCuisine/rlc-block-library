@@ -39,6 +39,17 @@ export const WithAspectRatio = {
   })
 }
 
+export const WithLink = {
+  name: 'With: Link',
+
+  args: mergeDataForStory(imageBaseData, {
+    link: {
+      url: 'https://google.com',
+      target: '_blank'
+    }
+  })
+}
+
 export const WithMaximumWidth = {
   name: 'With: Maximum Width',
 
