@@ -13,6 +13,7 @@ export default defineConfig({
     alias: {
       '@': pathTo('./', { from: import.meta.url }),
       '@Content': pathTo('./modules/blocks/content', { from: import.meta.url }),
+      '@Layout': pathTo('./modules/blocks/layout', { from: import.meta.url }),
     },
   },
 })
