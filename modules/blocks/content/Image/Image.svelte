@@ -60,6 +60,8 @@
   { #if data.link }
     <a href='{ data.link.url }' target='{ data.link.target }'>
       <img
+        alt='{ data.image.alt }'
+        title='{ data.image.title }'
         class="rlc-block rlc-h-full rlc-w-full rlc-object-cover rlc-object-center"
         src='{ imageUrl }'
         style='{ imageStyles }'
@@ -69,6 +71,8 @@
 
   { #if typeof(data.link) === 'undefined' }
     <img
+      alt='{ data.image.alt }'
+      title='{ data.image.title }'
       class="rlc-block rlc-h-full rlc-w-full rlc-object-cover rlc-object-center"
       src='{ imageUrl }'
       style='{ imageStyles }'

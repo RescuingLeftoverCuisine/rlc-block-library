@@ -101,8 +101,34 @@ describe('Image Block', () => {
     })
   })
 
-  it('renders the given link', () => {
+  it('renders the given alt text and title', () => {
     const { getByRole } = render(Image, mergeProps(imageBaseData, {
+      image: {
+        ...imageBaseData.data.image,
+        alt: 'Test Alt',
+        title: 'Test Title',
+      }
+    }))
+
+    const imageElement = getByRole('img')
+
+    expect(imageElement).toHaveAttribute('alt', 'Test Alt')
+    expect(imageElement).toHaveAttribute('title', 'Test Title')
+  })
+
+  it('renders the given link with all attributes', () => {
+    const { getByRole } = render(Image, mergeProps(imageBaseData, {
+      aspectRatio: '1/2',
+      maximumHeight: '400px',
+      maximumWidth: '200px',
+
+      image: {
+        ...imageBaseData.data.image,
+        alt: 'Test Alt',
+        title: 'Test Title',
+        filename: 'test-image.png',
+      },
+
       link: {
         url: 'test-url.com',
         target: '_self',
@@ -111,6 +137,16 @@ describe('Image Block', () => {
 
     const linkElement = getByRole('link')
     expect(linkElement).toHaveAttribute('href', 'test-url.com')
-    expect(linkElement.querySelector('img')).toBeInTheDocument()
+
+    const imageElement = linkElement.querySelector('img')
+    expect(imageElement).toHaveAttribute('src', 'test-image.png/m/1600x0/')
+    expect(imageElement).toHaveAttribute('alt', 'Test Alt')
+    expect(imageElement).toHaveAttribute('title', 'Test Title')
+
+    expect(imageElement).toHaveStyle({
+      aspectRatio: '1/2',
+      maxHeight: '400px',
+      maxWidth: '200px',
+    })
   })
 })
