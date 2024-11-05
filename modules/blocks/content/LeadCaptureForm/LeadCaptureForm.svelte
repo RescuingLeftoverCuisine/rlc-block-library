@@ -2,8 +2,8 @@
   export let data
 </script>
 
-<div class='rlc__block rlc__block__lead-capture-form'>
-  <form class='rlc-mx-2 rlc-flex rlc-flex-col rlc-gap-1 tablet:rlc-max-w-[450px] tablet:rlc-mx-auto' action='https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DO1000000BnAH' method='POST'>
+<div class='rlc__block rlc__block__lead-capture-form rlc-p-4'>
+  <form class='rlc-flex rlc-flex-col rlc-gap-1 tablet:rlc-max-w-[450px] tablet:rlc-mx-auto' action='https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DO1000000BnAH' method='POST'>
     <input type='hidden' name='oid' value='00DO1000000BnAH'>
     <input type='hidden' name='recordType' id='recordType' value='012O1000002CZIbIAO'>
     <input type='hidden' name='retURL' value='https://www.rescuingleftovercuisine.org/form-thank-you'>

@@ -13,8 +13,19 @@
 
   import Image from '@Content/Image/Image.svelte'
   import { imageBaseData } from '@Content/Image/Image.data.js'
-
   const imageData = mergeDataForStory(imageBaseData)
+
+  import Button from '@Content/Button/Button.svelte'
+  import { buttonBaseData } from '@Content/Button/Button.data.js'
+  const buttonData = mergeDataForStory(buttonBaseData)
+
+  import LeadCaptureForm from '@Content/LeadCaptureForm/LeadCaptureForm.svelte'
+  import { leadCaptureFormBaseData } from '@Content/LeadCaptureForm/LeadCaptureForm.data.js'
+  const leadCaptureFormData = mergeDataForStory(leadCaptureFormBaseData)
+
+  import Video from '@Content/Video/Video.svelte'
+  import { videoBaseData } from '@Content/Video/Video.data.js'
+  const videoData = mergeDataForStory(videoBaseData)
 </script>
 
 <TwoColumnLayout { ...twoColumnLayoutData }>

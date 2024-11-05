@@ -3,7 +3,7 @@
 </script>
 
 <div
-  class='rlc__block rlc__block__video rlc-aspect-video'
+  class='rlc__block rlc__block__video rlc-aspect-video rlc-py-4'
 >
   { #if data.channel === 'youtube' }
     <iframe
