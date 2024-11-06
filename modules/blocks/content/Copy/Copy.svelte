@@ -116,32 +116,34 @@
                 <li class='rlc__text__base rlc-list-disc'>
                   { #if bulletListContent.content }
                     { #each bulletListContent.content as listItemContent }
-                      { #if listItemContent.type === 'paragraph' }
-                        { #each listItemContent.content as listItemParagraphContent }
-                          { #if listItemParagraphContent.type === 'text' }
-                            { #if typeof(listItemParagraphContent.marks) !== 'undefined' }
-                              { #if listItemParagraphContent.marks[0].type === 'bold' }
-                                <strong>{ listItemParagraphContent.text }</strong>
+                      { #if listItemContent.content }
+                        { #if listItemContent.type === 'paragraph' }
+                          { #each listItemContent.content as listItemParagraphContent }
+                            { #if listItemParagraphContent.type === 'text' }
+                              { #if typeof(listItemParagraphContent.marks) !== 'undefined' }
+                                { #if listItemParagraphContent.marks[0].type === 'bold' }
+                                  <strong>{ listItemParagraphContent.text }</strong>
+                                { /if }
+
+                                { #if listItemParagraphContent.marks[0].type === 'italic' }
+                                  <em>{ listItemParagraphContent.text }</em>
+                                { /if }
+
+                                { #if listItemParagraphContent.marks[0].type === 'link' }
+                                  <a
+                                    class='rlc__text__link'
+                                    href='{ listItemParagraphContent.marks[0].attrs.href }'
+                                    target='{ listItemParagraphContent.marks[0].attrs.target }'
+                                  >{ listItemParagraphContent.text }</a>
+                                { /if }
                               { /if }
 
-                              { #if listItemParagraphContent.marks[0].type === 'italic' }
-                                <em>{ listItemParagraphContent.text }</em>
-                              { /if }
-
-                              { #if listItemParagraphContent.marks[0].type === 'link' }
-                                <a
-                                  class='rlc__text__link'
-                                  href='{ listItemParagraphContent.marks[0].attrs.href }'
-                                  target='{ listItemParagraphContent.marks[0].attrs.target }'
-                                >{ listItemParagraphContent.text }</a>
+                              { #if typeof(listItemParagraphContent.marks) === 'undefined' }
+                                { listItemParagraphContent.text }
                               { /if }
                             { /if }
-
-                            { #if typeof(listItemParagraphContent.marks) === 'undefined' }
-                              { listItemParagraphContent.text }
-                            { /if }
-                          { /if }
-                        { /each }
+                          { /each }
+                        { /if }
                       { /if }
                     { /each }
                   { /if }
