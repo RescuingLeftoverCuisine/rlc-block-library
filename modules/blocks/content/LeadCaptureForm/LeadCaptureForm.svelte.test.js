@@ -13,4 +13,28 @@ describe('Lead Capture Form Block', () => {
       props: leadCaptureFormBaseData,
     })
   })
+
+  it('includes the current URL in a hidden field', () => {
+    const { container } = render(LeadCaptureForm, {
+      props: leadCaptureFormBaseData,
+    })
+
+    expect(container.querySelector('input#Landing_Page_URL__c')).toHaveValue('http://localhost:3000/')
+  })
+
+  it('does not display the Company field by default', () => {
+    const { container } = render(LeadCaptureForm, {
+      props: leadCaptureFormBaseData,
+    })
+
+    expect(container.querySelector('input#company')).not.toBeInTheDocument()
+  })
+
+  it('displays the Company field when the Company field is enabled', () => {
+    const { container } = render(LeadCaptureForm, mergeProps(leadCaptureFormBaseData, {
+      showCompanyField: true,
+    }))
+
+    expect(container.querySelector('input#company')).toBeInTheDocument()
+  })
 })
