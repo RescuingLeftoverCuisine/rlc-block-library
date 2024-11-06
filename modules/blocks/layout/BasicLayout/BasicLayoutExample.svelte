@@ -25,7 +25,10 @@
 
   import LeadCaptureForm from '@Content/LeadCaptureForm/LeadCaptureForm.svelte'
   import { leadCaptureFormBaseData } from '@Content/LeadCaptureForm/LeadCaptureForm.data.js'
-  const leadCaptureFormData = mergeDataForStory(leadCaptureFormBaseData)
+  const leadCaptureFormData = mergeDataForStory(leadCaptureFormBaseData, {
+    heading: 'Lorem Ipsum',
+    subtext: 'Lorem ipsum dolor sit amet.',
+  })
 
   import Video from '@Content/Video/Video.svelte'
   import { videoBaseData } from '@Content/Video/Video.data.js'

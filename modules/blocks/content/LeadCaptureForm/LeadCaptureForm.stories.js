@@ -12,3 +12,10 @@ export default {
 export const Base = {
   args: mergeDataForStory(leadCaptureFormBaseData)
 }
+
+export const WithCopy = {
+  args: mergeDataForStory(leadCaptureFormBaseData, {
+    heading: 'Lorem Ipsum',
+    subtext: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+  })
+}

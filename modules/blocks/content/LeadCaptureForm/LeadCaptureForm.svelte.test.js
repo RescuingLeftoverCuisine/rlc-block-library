@@ -37,4 +37,32 @@ describe('Lead Capture Form Block', () => {
 
     expect(container.querySelector('input#company')).toBeInTheDocument()
   })
+
+  it('displays the heading when provided', () => {
+    const { container } = render(LeadCaptureForm, mergeProps(leadCaptureFormBaseData, {
+      heading: 'Test Heading',
+    }))
+
+    expect(container.querySelector('h2')).toHaveTextContent('Test Heading')
+  })
+
+  it('does not display heading when not provided', () => {
+    const { container } = render(LeadCaptureForm, mergeProps(leadCaptureFormBaseData))
+
+    expect(container.querySelector('h2')).not.toBeInTheDocument()
+  })
+
+  it('displays subtext when provided', () => {
+    const { container } = render(LeadCaptureForm, mergeProps(leadCaptureFormBaseData, {
+      subtext: 'Test Subtext',
+    }))
+
+    expect(container.querySelector('p')).toHaveTextContent('Test Subtext')
+  })
+
+  it('does not display subtext when not provided', () => {
+    const { container } = render(LeadCaptureForm, mergeProps(leadCaptureFormBaseData))
+
+    expect(container.querySelector('p')).not.toBeInTheDocument()
+  })
 })
