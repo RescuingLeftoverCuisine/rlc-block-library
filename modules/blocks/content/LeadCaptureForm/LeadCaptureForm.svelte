@@ -40,7 +40,7 @@
         <input class='rlc__form__text rlc-block rlc-w-full' id='company' maxlength='80' name='company' type='text' />
       { /if }
 
-      <input class='rlc__button rlc__button--theme-blue rlc-mt-2' type='submit' name='submit' value='Sign Up' />
+      <input class='rlc__button rlc__button--theme-blue rlc-mt-2' type='submit' name='submit' value='{ data.buttonText }' />
     </form>
   </div>
 </div>

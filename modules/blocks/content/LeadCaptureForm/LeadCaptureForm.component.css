@@ -8,7 +8,13 @@
   .rlc__block--layout--theme-blue .rlc__block__lead-capture-form input,
   .rlc__block--layout--theme-dark-gray .rlc__block__lead-capture-form input,
   .rlc__block--layout--theme-near-shore .rlc__block__lead-capture-form input {
-    @apply rlc-border-white !important;
+    @apply rlc-text-black rlc-border-white !important;
+  }
+
+  .rlc__block--layout--theme-blue .rlc__block__lead-capture-form input[type="submit"],
+  .rlc__block--layout--theme-dark-gray .rlc__block__lead-capture-form input[type="submit"],
+  .rlc__block--layout--theme-near-shore .rlc__block__lead-capture-form input[type="submit"] {
+    @apply rlc-text-white !important;
   }
 
   .rlc__block--layout--theme-blue .rlc__block__lead-capture-form input[type='submit'],

@@ -65,4 +65,12 @@ describe('Lead Capture Form Block', () => {
 
     expect(container.querySelector('p')).not.toBeInTheDocument()
   })
+
+  it('renders button text', () => {
+    const { getByRole } = render(LeadCaptureForm, mergeProps(leadCaptureFormBaseData, {
+      buttonText: 'Test Button Text',
+    }))
+
+    expect(getByRole('button')).toHaveValue('Test Button Text')
+  })
 })
