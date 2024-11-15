@@ -17,6 +17,7 @@
 @import "./blocks/content/LeadCaptureForm/LeadCaptureForm.component.css";
 
 @import "./blocks/layout/BasicLayout/BasicLayout.component.css";
+@import "./blocks/layout/GridLayout/GridLayout.component.css";
 @import "./blocks/layout/TwoColumnLayout/TwoColumnLayout.component.css";
 
 /* -------------------------------------------- */

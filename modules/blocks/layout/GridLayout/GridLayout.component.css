@@ -1,0 +1,23 @@
+@layer components {
+  /* -------------------------------------------- */
+  /* Justify grid items to hug the center column in two-column grid. */
+
+  .rlc__block__grid-layout .rlc__block:nth-child(2n + 1) {
+    @apply tablet:max-desktop-medium:rlc-justify-self-end !important;
+  }
+
+  .rlc__block__grid-layout .rlc__block:nth-child(2n + 2) {
+    @apply tablet:max-desktop-medium:rlc-justify-self-start !important;
+  }
+
+  /* -------------------------------------------- */
+  /* Justify grid items to hug the center column in three-column grid. */
+
+  .rlc__block__grid-layout .rlc__block:nth-child(3n + 1) {
+    @apply desktop-medium:rlc-justify-self-end !important;
+  }
+
+  .rlc__block__grid-layout .rlc__block:nth-child(3n + 3) {
+    @apply desktop-medium:rlc-justify-self-start !important;
+  }
+}
