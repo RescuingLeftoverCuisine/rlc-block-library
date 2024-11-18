@@ -390,9 +390,9 @@ describe('Copy Block', () => {
 
     const listElement = getByRole('list')
     expect(listElement.children.length).toBe(3)
-    expect(listElement.children[0].textContent).toBe(' Item 1 ')
-    expect(listElement.children[1].textContent).toBe(' Item 2 ')
-    expect(listElement.children[2].textContent).toBe(' Item 3 ')
+    expect(listElement.children[0].textContent).toBe(' Item 1')
+    expect(listElement.children[1].textContent).toBe(' Item 2')
+    expect(listElement.children[2].textContent).toBe(' Item 3')
   })
 
   it('renders bold text within bulleted lists', () => {
@@ -449,13 +449,13 @@ describe('Copy Block', () => {
     expect(listElement.children.length).toBe(1)
 
     const segmentOne = within(listElement.children[0]).getByText(/List/)
-    expect(segmentOne.tagName).toBe('LI')
+    expect(segmentOne.tagName).toBe('P')
 
     const segmentTwo = within(listElement.children[0]).getByText(/Item/)
     expect(segmentTwo.tagName).toBe('STRONG')
 
     const segmentThree = within(listElement.children[0]).getByText(/1/)
-    expect(segmentThree.tagName).toBe('LI')
+    expect(segmentThree.tagName).toBe('P')
   })
 
   it('renders italic text within bulleted lists', () => {
@@ -512,13 +512,13 @@ describe('Copy Block', () => {
     expect(listElement.children.length).toBe(1)
 
     const segmentOne = within(listElement.children[0]).getByText(/List/)
-    expect(segmentOne.tagName).toBe('LI')
+    expect(segmentOne.tagName).toBe('P')
 
     const segmentTwo = within(listElement.children[0]).getByText(/Item/)
     expect(segmentTwo.tagName).toBe('EM')
 
     const segmentThree = within(listElement.children[0]).getByText(/1/)
-    expect(segmentThree.tagName).toBe('LI')
+    expect(segmentThree.tagName).toBe('P')
   })
 
   it('renders links within bulleted lists with metadata', () => {
@@ -580,7 +580,7 @@ describe('Copy Block', () => {
     expect(listElement.children.length).toBe(1)
 
     const segmentOne = within(listElement.children[0]).getByText(/List/)
-    expect(segmentOne.tagName).toBe('LI')
+    expect(segmentOne.tagName).toBe('P')
 
     const segmentTwo = within(listElement.children[0]).getByText(/Item/)
     expect(segmentTwo.tagName).toBe('A')
@@ -588,6 +588,6 @@ describe('Copy Block', () => {
     expect(segmentTwo).toHaveAttribute('target', '_blank')
 
     const segmentThree = within(listElement.children[0]).getByText(/1/)
-    expect(segmentThree.tagName).toBe('LI')
+    expect(segmentThree.tagName).toBe('P')
   })
 })
