@@ -9,7 +9,7 @@ export default {
   component: GridLayoutExample,
 }
 
-export const WithGridItemPartner = {
-  name: 'With: Grid Item (Partner)',
+export const WithGridItemImageWithQuote = {
+  name: 'With: Grid Item (Image With Quote)',
   args: mergeDataForStory(gridLayoutBaseData),
 }

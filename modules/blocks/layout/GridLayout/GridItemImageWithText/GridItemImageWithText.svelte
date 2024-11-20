@@ -17,7 +17,7 @@
   }
 </script>
 
-<div class='rlc__block rlc__block__grid-item-partner rlc-flex rlc-flex-col rlc-items-center rlc-gap-4 rlc-max-w-[320px]'>
+<div class='rlc__block rlc__block__grid-item-image-with-text rlc-flex rlc-flex-col rlc-items-center rlc-gap-4 rlc-max-w-[320px]'>
   <div class='rlc-w-[150px] rlc-h-[150px]'>
     <img
       alt='{ data.image.alt }'
@@ -28,12 +28,8 @@
   </div>
 
   <div class='rlc-bg-deep rlc-text-white rlc-text-center rlc-px-6 rlc-py-12 rlc-flex rlc-flex-col rlc-gap-2 rlc-rounded-2xl rlc-flex-1 rlc-justify-center'>
-    <p class='rlc__block__grid-item-partner__quote rlc__text__base'>
-      "{ data.quote }"
-    </p>
-
-    <p class='rlc__block__grid-item-partner__attribution rlc__text__base rlc-font-bold'>
-      – { data.attribution }
+    <p class='rlc__block__grid-item-partner__text rlc__text__base'>
+      { data.text }
     </p>
   </div>
 </div>

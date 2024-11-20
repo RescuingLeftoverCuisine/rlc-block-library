@@ -2,20 +2,20 @@ import '@testing-library/jest-dom'
 import { mergeProps } from '@/tests/support/merge.helper.js'
 import { render } from '@testing-library/svelte'
 
-import GridItemPartner from './GridItemPartner.svelte'
-import { gridItemPartnerBaseData } from './GridItemPartner.data.js'
+import GridItemImageWithQuote from './GridItemImageWithQuote.svelte'
+import { gridItemImageWithQuoteBaseData } from './GridItemImageWithQuote.data.js'
 
 // --------------------------------------------
 
-describe('GridItemPartner Block', () => {
+describe('Grid Item: Image With Quote Block', () => {
   it('renders with required data', () => {
-    render(GridItemPartner, {
-      props: gridItemPartnerBaseData,
+    render(GridItemImageWithQuote, {
+      props: gridItemImageWithQuoteBaseData,
     })
   })
 
   it('renders the given image', () => {
-    const { getByRole } = render(GridItemPartner, mergeProps(gridItemPartnerBaseData, {
+    const { getByRole } = render(GridItemImageWithQuote, mergeProps(gridItemImageWithQuoteBaseData, {
       image: {
         filename: 'test-image.jpg'
       }
@@ -30,9 +30,9 @@ describe('GridItemPartner Block', () => {
   })
 
   it('renders the given alt text and title', () => {
-    const { getByRole } = render(GridItemPartner, mergeProps(gridItemPartnerBaseData, {
+    const { getByRole } = render(GridItemImageWithQuote, mergeProps(gridItemImageWithQuoteBaseData, {
       image: {
-        ...gridItemPartnerBaseData.data.image,
+        ...gridItemImageWithQuoteBaseData.data.image,
         alt: 'Test Alt',
         title: 'Test Title',
       }
@@ -45,7 +45,7 @@ describe('GridItemPartner Block', () => {
   })
 
   it('renders the given quote', () => {
-    const { container } = render(GridItemPartner, mergeProps(gridItemPartnerBaseData, {
+    const { container } = render(GridItemImageWithQuote, mergeProps(gridItemImageWithQuoteBaseData, {
       quote: 'Test Quote'
     }))
 
@@ -55,7 +55,7 @@ describe('GridItemPartner Block', () => {
   })
 
   it('renders the given attribution', () => {
-    const { container } = render(GridItemPartner, mergeProps(gridItemPartnerBaseData, {
+    const { container } = render(GridItemImageWithQuote, mergeProps(gridItemImageWithQuoteBaseData, {
       attribution: 'Test Attribution'
     }))
 
