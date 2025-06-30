@@ -3,7 +3,6 @@ import { basicLayoutBaseData } from './BasicLayout.data.js'
 import { mergeDataForStory } from '@/tests/support/merge.helper.js'
 
 // --------------------------------------------
-
 export default {
   title: 'Blocks/Layout/Basic Layout',
   component: BasicLayoutExample,

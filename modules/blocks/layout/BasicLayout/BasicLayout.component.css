@@ -15,4 +15,9 @@
   .rlc__block__basic-layout__content {
     @apply rlc-max-w-[940px] rlc-mx-auto !important;
   }
+
+  .rlc__block__basic-layout
+  .rlc__block__button:last-child {
+    @apply rlc-pb-4 tablet:rlc-pb-8 !important;
+  }
 }
