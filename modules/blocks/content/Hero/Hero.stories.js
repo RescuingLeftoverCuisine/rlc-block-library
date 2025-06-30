@@ -12,3 +12,11 @@ export default {
 export const Base = {
   args: mergeDataForStory(heroBaseData)
 }
+
+export const WithMaximumHeight = {
+  name: 'With: Maximum Height',
+
+  args: mergeDataForStory(heroBaseData, {
+    maximumHeight: '400',
+  })
+}

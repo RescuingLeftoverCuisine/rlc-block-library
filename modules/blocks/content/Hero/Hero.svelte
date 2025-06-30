@@ -7,6 +7,8 @@
   // https://www.storyblok.com/docs/image-service#united-states
   let imageUrl = `${ data.image.filename }/m/1600x0`
 
+  const maximumHeight = data.maximumHeight ? `${ data.maximumHeight }px` : 'none'
+
   // Development Only (Do Not Port)
   // --------------------------------------------
 
@@ -19,6 +21,7 @@
 
 <div
   class='rlc__block rlc__block__hero rlc-relative rlc-flex rlc-flex-col rlc-justify-center rlc-p-4 tablet:rlc-p-10 desktop-medium:rlc-p-12 desktop-wide:rlc-p-14'
+  style='max-height: { maximumHeight }'
 >
   <div
     style='background-image: url("{ imageUrl }")'

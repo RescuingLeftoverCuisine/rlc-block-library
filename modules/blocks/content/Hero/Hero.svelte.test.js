@@ -40,4 +40,23 @@ describe('Hero Block', () => {
       background-image: url("test-image.jpg/m/1600x0")
     `)
   })
+
+  it('renders with maximum height when a maximum height is provided', () => {
+    const { container } = render(Hero, mergeProps(heroBaseData, {
+      maximumHeight: '200'
+    }))
+
+    const block = container.querySelector('.rlc__block__hero')
+
+    expect(block).toHaveStyle(`
+      max-height: 200px
+    `)
+  })
+
+  it('does not render with maximum height when a maximum height is not provided', () => {
+    const { container } = render(Hero, mergeProps(heroBaseData))
+
+    const block = container.querySelector('.rlc__block__hero')
+    expect(getComputedStyle(block).maxHeight).to.eq('none')
+  })
 })
