@@ -467,3 +467,90 @@ export const copyWithAllSupportedElements = {
     }
   }
 }
+
+export const copyWithHeadingAndText = {
+  data: {
+    copy: {
+      content: [
+        {
+          type: 'heading',
+
+          attrs: {
+            level: 1
+          },
+
+          content: [
+            {
+              type: 'text',
+              text: 'Heading 1',
+            }
+          ]
+        },
+
+        {
+          type: 'paragraph',
+
+          content: [
+            {
+              type: 'text',
+              text: 'Lorem ipsum ',
+            },
+
+            {
+              type: 'text',
+              text: 'dolor sit amet',
+
+              marks: [
+                {
+                  type: 'bold'
+                }
+              ]
+            },
+
+            {
+              type: 'text',
+              text: ', ',
+            },
+
+            {
+              type: 'text',
+              text: 'consectetur adipiscing elit',
+
+              marks: [
+                {
+                  type: 'italic'
+                }
+              ]
+            },
+
+            {
+              type: 'text',
+              text: ', ',
+            },
+
+            {
+              type: 'text',
+              text: 'sed do eiusmod',
+
+              marks: [
+                {
+                  type: 'link',
+
+                  attrs: {
+                    href: 'https://google.com',
+                    target: '_self',
+                  }
+                }
+              ]
+            },
+
+            {
+              type: 'text',
+              text: ' tempor incididunt ut labore et dolore magna aliqua.',
+            }
+          ]
+        },
+      ]
+    }
+  }
+}

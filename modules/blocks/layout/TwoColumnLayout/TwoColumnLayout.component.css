@@ -10,4 +10,9 @@
   .rlc__block--layout--theme-near-shore.rlc__block__two-column-layout {
     @apply rlc-bg-near-shore !important;
   }
+
+  .rlc__block__two-column-layout
+  .rlc__block__copy {
+    @apply rlc-max-w-[720px] rlc-mx-auto rlc-px-4 tablet:rlc-px-8 !important;
+  }
 }

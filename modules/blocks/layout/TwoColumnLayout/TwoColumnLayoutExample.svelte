@@ -14,9 +14,18 @@
   import LeadCaptureForm from '@Content/LeadCaptureForm/LeadCaptureForm.svelte'
   import { leadCaptureFormBaseData } from '@Content/LeadCaptureForm/LeadCaptureForm.data.js'
   const leadCaptureFormData = mergeDataForStory(leadCaptureFormBaseData)
+
+  import Copy from '@Content/Copy/Copy.svelte'
+  import { copyWithHeadingAndText } from '@Content/Copy/Copy.data.js'
+  const copyData = mergeDataForStory(copyWithHeadingAndText, {})
 </script>
 
 <TwoColumnLayout { ...twoColumnLayoutData }>
   <Image slot='column-left' { ...imageData } />
   <LeadCaptureForm slot='column-right' { ...leadCaptureFormBaseData } />
+</TwoColumnLayout>
+
+<TwoColumnLayout { ...twoColumnLayoutData }>
+  <Copy slot='column-left' { ...copyData } />
+  <Image slot='column-right' { ...imageData } />
 </TwoColumnLayout>
