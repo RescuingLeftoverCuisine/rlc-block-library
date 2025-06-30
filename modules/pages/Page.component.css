@@ -1,13 +1,2 @@
 @layer components {
-  .rlc__page
-  .rlc__page__content {
-    @apply rlc-pt-[98.5px] !important;
-  }
-
-  @media (min-width: 1296px) {
-    .rlc__page
-    .rlc__page__content {
-      @apply rlc-pt-[155.5px] !important;
-    }
-  }
 }
